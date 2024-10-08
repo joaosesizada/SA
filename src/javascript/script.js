@@ -1,11 +1,11 @@
 $(document).ready(function() {
     $('#mobile_btn').on('click', function() {
-        $('#mobile_menu').toggleClass('active');
+        $('#mobile_menu').toggleClass('ativado');
         $('#mobile_btn').find('i').toggleClass('fa-x');
     });
 
     const sections = $('section');
-    const navItems = $('.nav-item');
+    const navItems = $('.nav-item.pc');
 
     $(window).on('scroll', function() {
         const header = $('header')

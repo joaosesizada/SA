@@ -82,7 +82,7 @@ header {
         cursor: pointer;
     }
 
-    #mobile_menu.active {
+    #mobile_menu.ativado {
         display: block;
         display: flex;
         flex-direction: column;
