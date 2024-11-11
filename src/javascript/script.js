@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    $('#mobile_btn').on('click', function() {
+$(document).ready(function () {
+    $('#mobile_btn').on('click', function () {
         $('#mobile_menu').toggleClass('ativado');
         $('#mobile_btn').find('i').toggleClass('fa-x');
     });
@@ -7,108 +7,137 @@ $(document).ready(function() {
     const sections = $('section');
     const navItems = $('.nav-item.pc');
 
-    $(window).on('scroll', function() {
-        const header = $('header')
-        let activeSectionIndex = 0;
-        const scrollPosition = $(window).scrollTop() - header.outerHeight()
+});
 
-        if (scrollPosition <= 0) {
-            header.css('box-shadow', 'none');
-        } else {
-            header.css('box-shadow', '5px 1px 5px rgba(0, 0, 0, 0.9)');
+document.getElementById('btn-dropdown').addEventListener('click', function () {
+    document.getElementById('donw-menu').classList.toggle('show');
+});
+
+window.addEventListener('click', function (event) {
+    if (!event.target.matches('#btn-dropdown')) {
+        var dropdowns = document.getElementById('donw-menu');
+        if (dropdowns.classList.contains('show')) {
+            dropdowns.classList.remove('show');
+        }
+    }
+});
+
+
+window.addEventListener('scroll', function () {
+    var header = document.getElementById('header');
+    var btnDropdown = document.querySelector('#btn-dropdown');
+    
+    if (window.scrollY > 50) {
+        header.classList.add('on-scroll');
+        btnDropdown.style.color = '#ffffff';
+        btnDropdown.classList.add('navoff');
+        btnDropdown.classList.remove('navon');
+    } else {
+        header.classList.remove('on-scroll');
+        btnDropdown.style.color = '#6812f3';
+        btnDropdown.classList.add('navon');
+        btnDropdown.classList.remove('navoff');
+    }
+});
+
+document.getElementById('btn-dropdown-mobile').addEventListener('click', function () {
+    document.getElementById('donw-menu-mobile').classList.toggle('show');
+});
+
+window.addEventListener('click', function (event) {
+    if (!event.target.matches('#btn-dropdown-mobile')) {
+        var dropdowns = document.getElementById('donw-menu-mobile');
+        if (dropdowns.classList.contains('show')) {
+            dropdowns.classList.remove('show');     
+        }
+    }
+});
+
+
+const contup = document.querySelectorAll('.contup-value');
+let interval = 5000;
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            let item = entry.target;
+            let startValue = 0;
+            let endValue = parseInt(item.getAttribute("data-val"));
+            let duration = Math.floor(interval / endValue);
+            let counter = setInterval(function () {
+                startValue++;
+                item.textContent = `${startValue}+`;
+                if (startValue == endValue) {
+                    clearInterval(counter);
+                    observer.unobserve(item);
+                }
+            }, duration);
+        }
+    });
+}, { threshold: 1.0 });
+
+contup.forEach(item => {
+    observer.observe(item);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector('.fluxo-cruzado-container');
+    const fluxoCruzado = document.querySelectorAll('.fluxo-cruzado')[0];
+
+    let scrollAmount = 0;
+    let scrollSpeed = 0.6; // Ajuste a velocidade aqui
+    let isScrolling = true;
+    let targetScrollSpeed = scrollSpeed; // Velocidade alvo para transições suaves
+
+    function scrollContent() {
+        if (isScrolling) {
+            scrollAmount += scrollSpeed;
+            if (scrollAmount >= fluxoCruzado.scrollWidth / 2) {
+                scrollAmount = 0; // Reiniciar a rolagem
+            }
+            container.scrollLeft = scrollAmount;
         }
 
-        sections.each(function(i) {
-            const section = $(this);
-            const sectionTop = section.offset().top - 250;
-            const sectionBottom = sectionTop+ section.outerHeight()
+        // Ajustar a velocidade de rolagem suavemente
+        if (scrollSpeed !== targetScrollSpeed) {
+            scrollSpeed += (targetScrollSpeed - scrollSpeed) * 0.1;
+        }
 
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                activeSectionIndex = i
-                return false
-            }
-        })
-        navItems.removeClass('active')
-        $(navItems[activeSectionIndex]).addClass('active');
-    })
+        requestAnimationFrame(scrollContent);
+    }
 
-    ScrollReveal().reveal('#cta', {
-        origin: 'left',
-        duration: 2000,
-        distance: '100%'
-    })
-    ScrollReveal().reveal('.shape', {
-        origin: 'right',
-        duration: 2000,
-        distance: '100%'
-    })
-    ScrollReveal().reveal('.sobre-aboutUs', {
-        origin: 'left',
-        duration: 2000,
-        distance: '100%'
-    })
-    ScrollReveal().reveal('.sobre-commitment', {
-        origin: 'left',
-        duration: 2000,
-        distance: '100%'
-    })
-    ScrollReveal().reveal('.icon-item', {
-        origin: 'bottom',
-        duration: 2000,
-        distance: '100%'
-    })
-    ScrollReveal().reveal('#box-solutions-title', {
-        origin: 'left',
-        duration: 2000,
-        distance: '100%'
-    })
-    ScrollReveal().reveal('.solutions-area-item', {
-        origin: 'bottom',
-        duration: 2000,
-        distance: '100%'
-    })
-    ScrollReveal().reveal('#box-solutions-btn', {
-        origin: 'bottom',
-        duration: 2000,
-        distance: '100%'
-    })
-    ScrollReveal().reveal('.sobre-padding.locations', {
-        origin: 'left',
-        duration: 2000,
-        distance: '100%'
-    })
-    ScrollReveal().reveal('#shape-feedback', {
-        origin: 'left',
-        duration: 2000,
-        distance: '100%'
-    })
-    ScrollReveal().reveal('#testimonials_content', {
-        origin: 'right',
-        duration: 2000,
-        distance: '100%'
-    })
+    container.addEventListener('mouseenter', () => {
+        targetScrollSpeed = 0; // Reduzir a velocidade para 0
+    });
+
+    container.addEventListener('mouseleave', () => {
+        targetScrollSpeed = 0.6; // Retomar a velocidade original
+    });
+
+    requestAnimationFrame(scrollContent);
 });
 
-// Seleciona todos os botões com a classe .btn-default
-const buttons = document.querySelectorAll('.btn-default');
+const controlers = document.querySelectorAll('.btn-control');
 
-// Itera sobre cada botão e adiciona o evento de clique
-buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        // Define o número do WhatsApp no formato internacional
-        const telefone = '5547997727540'; // Substitua pelo número da empresa
+controlers.forEach((control, index) => {
+    control.addEventListener('click', function() {
+        const carrosel = document.getElementById('carrosel-solution');
+        const largura = carrosel.offsetWidth;
 
-        // Define a mensagem predefinida
-        const mensagem = 'Olá tudo bem?, eu vim pelo seu site e gostaria de solicitar um orçamento.';
-
-        // Codifica a mensagem para a URL
-        const mensagemCodificada = encodeURIComponent(mensagem);
-
-        // Monta a URL do WhatsApp
-        const urlWhatsApp = `https://wa.me/${telefone}?text=${mensagemCodificada}`;
-
-        // Redireciona para o WhatsApp
-        window.open(urlWhatsApp, '_blank');
+        if (control.classList.contains('select')) {
+            control.classList.remove('select');
+            const nextIndex = (index + 1) % controlers.length; // Garante que se o próximo botão não existir, começa de novo
+            controlers[nextIndex].classList.add('select');
+            carrosel.scrollLeft = (nextIndex * largura);
+        } else {
+            controlers.forEach(controlTwo => {
+                controlTwo.classList.remove('select');
+            });
+            controlers[index].classList.add('select')
+            carrosel.scrollLeft = (index * largura);
+        }
     });
 });
+
+
 

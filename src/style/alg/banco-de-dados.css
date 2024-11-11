@@ -1,0 +1,236 @@
+:root {
+    --primary: #6610f2;
+    --secondary: #ffffff;
+    --tertiary: #333;
+}
+
+#data-home {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    margin-top: -5%;
+}
+
+#data-home .title {
+    font-size: 4rem;
+    display: inline;
+    white-space: normal;
+}
+
+#data-home .title span {
+    color: var(--primary);
+}
+
+#data-home .description {
+    font-size: 1.2rem;
+}
+
+#forma-home-data {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50px;
+    right: -125px;
+    z-index: 1;
+    border-radius: 999em 999em 40px;
+    box-sizing: border-box;
+    background-color: var(--primary);
+}
+
+#forma-home-data img {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    z-index: 1;
+    height: 110%;
+    background-color: transparent;
+}
+
+#info-data-first {
+    text-align: center;
+    padding: 48px;
+}
+
+#info-data-first h2 {
+    font-size: 2.4rem;
+    color: var(--primary);
+    padding: 24px 0px;
+}
+
+#info-data-first p {
+    font-size: 1.2rem;
+}
+
+.box-sql {
+    background-image: url('/src/images/peak_background.jpg');
+    background-size: cover; /* Faz a imagem cobrir todo o elemento sem deformar */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    height: auto;
+    margin-top: 100px;
+    display: flex;
+}
+
+.box-sql.two {
+    position: relative; /* Adicione esta linha */
+    margin-top: 0px;
+    background-image: none;
+}
+
+.box-sql.two::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/src/images/peak_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    z-index: -1; /* Garante que o fundo fique atrás do conteúdo */
+}
+
+#box-sql-text {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+#box-sql-text h2{
+    font-size: 2.4rem;
+    color: var(--primary);
+}
+
+#box-sql-text p{
+    font-size: 1.1rem;
+}
+
+#box-sql-text strong{
+    color: var(--primary);
+}
+
+#box-sql-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.box-sql-colum {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 24px;
+}
+
+.box-sql-colum.center {
+    margin-top: 40px;
+}
+
+.box-sql-item img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain; /* Mantém a proporção da imagem sem cortar */
+}
+
+.box-sql-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.3);
+}
+
+.two-itens {
+    display: flex;
+}
+
+.flex-one {
+    margin-top: 48px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-one.image {
+    flex: 0.5;
+}
+
+.flex-one h2{
+    color: var(--primary);
+    font-size: 2.1rem;
+}
+
+.flex-one p{
+    font-size: 1rem;
+}
+
+.flex-one img {
+    height: 300px;
+}
+
+@media screen and (max-width: 1608px) {
+    #forma-home-data {
+        left: 35%;
+    }
+
+    #data-home {
+        width: 50%;
+    }
+
+    #forma-home-data {
+        left: 27.5%;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+
+    #data-home {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #data-home .title {
+        font-size: 3.2rem;
+    }
+
+    #data-home .description {
+        font-size: 1.2rem;
+    }
+
+    .box-sql {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #box-sql-text {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .two-itens {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #data-home .title {
+        padding: 0px 10px;
+        font-size: 2.2rem;
+    }
+}

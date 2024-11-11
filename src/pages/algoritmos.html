@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/src/images/icon-page.png" sizes="64x64" type="image/png" id="rel-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="/src/javascript/script.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="/src/style/style.css">
+    <script src="/src/javascript/alg.js" defer></script>
+    <title>JVAC</title>
+</head>
+
+<body>
+    <header>
+        <nav id="header" class="navbar">
+            <div class="item-nav">
+                <a id="logo-hearder" href="/">
+                    <i class="bi bi-globe2"></i>
+                    <h2>JVAC</h2>
+                </a>
+            </div>
+            <div class="list-nav">
+                <ul id="nav_list">
+                    <li class="nav-item pc">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="nav-item pc">
+                        <button id="btn-dropdown" class="navon">
+                            Serviços
+                        </button>
+                        <div id="drop">
+                            <div id="donw-menu">
+                                <ul>
+                                    <li class="li one"><a href="/src/pages/algoritmos.html">Algoritmos e Lógica</a></li>
+                                    <li class="li two"><a href="/src/pages/banco-de-dados.html">Banco de Dados</a></li>
+                                    <li class="li tree"><a href="/src/pages/eletronica.html">Componentes eletronicos</a></li>
+                                    <li class="li four"><a href="/src/pages/redes.html">Redes</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item pc">
+                        <a href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="item-nav btn">
+                <button class="btn-default">Solicitar Orçamento</button>
+            </div>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <button id="btn-dropdown-mobile" class="navoff">
+                        Serviços
+                    </button>
+                    <div id="drop">
+                        <div id="donw-menu-mobile">
+                            <ul>
+                                <li class="li one"><a href="/src/pages/algoritmos.html">Algoritmos e Lógica</a></li>
+                                <li class="li two"><a href="/src/pages/banco-de-dados.html">Banco de Dados</a></li>
+                                <li class="li tree"><a href="/src/pages/eletronica.html">Componentes eletronicos</a></li>
+                                <li class="li four"><a href="/src/pages/redes.html">Redes</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+
+            <button class="btn-default">Entrar em Contato</button>
+
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home-alg">
+            <div id="alg-home">
+                <div class="typed-container">
+                    <h1 class="title" id="home-title-alg"></h1>
+                </div>
+
+                <script>
+                    var typed = new Typed('#home-title-alg', {
+                        strings: [
+                            'Desenvolvendo Ferramentas para facilitar sua <span>Vida</span>',
+                            'Criando Códigos para simplificar seu <span> Negócio</span>',
+                            'Desenvolvendo Soluções para otimizar sua <span>Vida</span>',
+                            'Inovando com Algoritmos para transformar sua <span> Realidade</span>',
+                            'Engenharia de Lógica para melhorar sua <span> Jornada</span>',
+                            'Transformando Ideias em Lógica para seu <span> Futuro</span>',
+                            'Algoritmos Inteligentes para facilitar sua <span> Vida</span>',
+                            'Facilitando a Vida com Tecnologia de <span> Ponta</span>',
+                            'Elevando sua Vida com Programação e <span> Inovação</span>',
+                        ],
+                        typeSpeed: 50,
+                        loop: true,
+                        showCursor: true,
+                        cursorChar: '|',
+                        smartBackspace: true,
+                        startDelay: 300,
+                        backSpeed: 30,
+                        backDelay: 1500,
+                    });
+                </script>
+
+                <p class="description">
+                    Na nossa empresa, não apenas <strong>desenvolvemos</strong> algoritmos e códigos, mas também
+                    proporcionamos
+                    <strong>soluções tecnológicas</strong> abrangentes para atender todas as <strong>necessidades de
+                        lógica e programação da sua Empresa.</strong>
+                </p>
+                <div id="alg-home_buttons">
+                    <a href="" class="btn-default">Fale Conosco</a>
+                </div>
+
+            </div>
+            <div class="shape-home-alg">
+                <div id="forma-home-alg">
+                    <img src="/src/images/page-alg-log.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="introduction-alg">
+            <div id="box-introduction-alg">
+                <div id="box-introduction-alg-text">
+                    <h2>O que são algoritmos e lógica computacional?</h2>
+                    <p>Já imaginou como seu videogame favorito sabe exatamente o que fazer quando você aperta um botão? Ou como o seu celular te mostra as fotos mais recentes? Isso tudo acontece graças aos algoritmos! 
+                    <br>
+                    <br>
+                    Um algoritmo é como uma receita de bolo, mas para computadores. É uma lista de instruções bem detalhada que o computador segue passo a passo para realizar uma tarefa. Por exemplo, um algoritmo pode te dizer como encontrar o caminho mais curto para chegar na casa de um amigo.
+                    <br>
+                    <br>
+                    E a lógica computacional é a habilidade de pensar como um computador, de entender como organizar essas instruções para resolver problemas. É como montar um quebra-cabeça, mas com números e códigos!
+                    <br>
+                    <br>
+                    Quer aprender a criar seus próprios jogos ou aplicativos? A lógica computacional é a chave para isso! É super divertido e você vai se surpreender com tudo o que é possível fazer com um computador.</p>
+                </div>
+                <div>
+                <div id="box-introduction-alg-shape">
+                    <img src="/src/images/page-alg-int.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="fluxo-alg">
+            <div id="box-fluxo-alg">
+                <div id="box-fluxo-alg-text">
+                    <h2>Fluxogramas</h2>
+                    <p>
+                        Um fluxograma é uma representação visual de um processo, sistema ou conjunto de instruções, utilizando símbolos e setas para ilustrar o fluxo de etapas. 
+                        É uma ferramenta eficaz para mapear processos complexos, identificar pontos críticos e melhorar a eficiência. 
+                        Amplamente utilizado em engenharia, programação e gestão de projetos, o fluxograma facilita a compreensão e a comunicação de procedimentos, ajudando na tomada de decisões e na solução de problemas.
+                    </p>
+                </div>
+                <div id="box-fluxo-alg-shape">
+                    <img src="/src/images/fluxo-grama.png" alt="">
+                </div>
+            </div>
+            <div id="box-symbol-fluxo">
+                <h2>simbologia de fluxograma</h2>
+                <p>A simbologia de fluxograma usa formas padrão para representar visualmente etapas, ações e decisões em processos. Cada forma indica uma função específica: a elipse marca o início e o fim; o retângulo, uma ação ou tarefa; o losango, uma decisão; e o paralelogramo, a entrada ou saída de dados. Essa representação facilita o entendimento e a organização do fluxo de atividades.</p>
+                <img src="/src/images/symbols-fluxograma.webp" alt="">
+            </div>
+            <div id="box-fluxo-exemplo">
+                <h2>Outro exeplo que separa números por pariedade</h2>
+                <div style="width: 100%; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:100%; height:480px" src="https://lucid.app/documents/embedded/511e803d-631c-429e-8a75-8d356f43772b" id="ghQmjbFeV5~z"></iframe></div>
+            </div>
+        </section>
+        <section id="scripts-alg">
+            <h2 id="title-scripts-alg">Testes alguns de nosso Scripts</h2>
+            <div id="box-scripts-alg">
+                <div class="box-cpf-alg">
+                    <h2>Validar CPF</h2>
+                    <input type="text" id="cpf-validar">
+                    <div id="cpf-validado"></div>
+                    <button onclick="checkCPF()">Validar</button>
+                </div>
+                <div class="box-cpf-alg">
+                    <h2>Gerador de CPF</h2>
+                    <button onclick="criaCPF()">Gerar</button>
+                    <div id="cpf-gerado"></div> 
+                </div>
+            </div>
+            <div id="main-container-ordenation">
+                <h2>Metodos de Ordenação</h2>
+            </div>
+            <div id="main-container-ordenation">
+                <div class="container-ordenation">
+                    <div class="header-title">Método de Ordenação: Bubble Sort</div>
+                  
+                    <div class="input-section">
+                      <input id="arrayInput" class="number-input" type="text" placeholder="Digite números separados por vírgula" />
+                      <button id="sortButton" class="btn-sort" onclick="ordenarNumeros()">Ordenar</button>
+                    </div>
+                  
+                    <div class="counter-section">
+                      <span class="counter-label">Interações:</span>
+                      <span id="interactionCount" class="counter-value">0</span>
+                    </div>
+                  
+                    <div id="sortedResult" class="result-output"></div>
+                    <div id="sortingStepsLog" class="sorting-steps-log" style="display: none;"></div>
+                  </div>
+                  
+                  <div class="container-ordenation">
+                      <div class="header-title">Método de Ordenação: Insertion Sort</div>
+                    
+                      <div class="input-section">
+                        <input id="insertionInput" class="number-input" type="text" placeholder="Digite números separados por vírgula" />
+                        <button id="insertionSortButton" class="btn-sort" onclick="ordenarInsertion()">Ordenar</button>
+                      </div>
+                    
+                      <div class="counter-section">
+                        <span class="counter-label">Interações:</span>
+                        <span id="insertionInteractionCount" class="counter-value">0</span>
+                      </div>
+                    
+                      <div id="insertionSortedResult" class="result-output"></div>
+                      <div id="insertionSortingStepsLog" class="sorting-steps-log" style="display: none;"></div>
+                    </div>
+                    
+                    <!-- Selection Sort Section -->
+                    <div class="container-ordenation">
+                      <div class="header-title">Método de Ordenação: Selection Sort</div>
+                    
+                      <div class="input-section">
+                        <input id="selectionInput" class="number-input" type="text" placeholder="Digite números separados por vírgula" />
+                        <button id="selectionSortButton" class="btn-sort" onclick="ordenarSelection()">Ordenar</button>
+                      </div>
+                    
+                      <div class="counter-section">
+                        <span class="counter-label">Interações:</span>
+                        <span id="selectionInteractionCount" class="counter-value">0</span>
+                      </div>
+                    
+                      <div id="selectionSortedResult" class="result-output"></div>
+                      <div id="selectionSortingStepsLog" class="sorting-steps-log" style="display: none;"></div>
+                    </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="redes-footer-text">©JVAC - Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

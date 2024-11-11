@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/src/images/icon-page.png" sizes="64x64" type="image/png" id="rel-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="/src/javascript/script.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="/src/style/style.css">
+    <title>JVAC</title>
+</head>
+
+<body>
+    <header>
+        <nav id="header" class="navbar">
+            <div class="item-nav">
+                <a id="logo-hearder" href="/">
+                    <i class="bi bi-globe2"></i>
+                    <h2>JVAC</h2>
+                </a>
+            </div>
+                <ul id="nav_list">
+                    <li class="nav-item pc">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="nav-item pc">
+                        <button id="btn-dropdown" class="navon">
+                            Serviços
+                        </button>
+                        <div id="drop">
+                            <div id="donw-menu">
+                                <ul>
+                                    <li class="li one"><a href="/src/pages/algoritmos.html">Algoritmos e Lógica</a></li>
+                                    <li class="li two"><a href="/src/pages/banco-de-dados.html">Banco de Dados</a></li>
+                                    <li class="li tree"><a href="/src/pages/eletronica.html">Componentes eletronicos</a></li>
+                                    <li class="li four"><a href="/src/pages/redes.html">Redes</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item pc">
+                        <a href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="item-nav btn">
+                <button class="btn-default">Solicitar Orçamento</button>
+            </div>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <button id="btn-dropdown-mobile" class="navoff">
+                        Serviços
+                    </button>
+                    <div id="drop">
+                        <div id="donw-menu-mobile">
+                            <ul>
+                                <li class="li one"><a href="/src/pages/algoritmos.html">Algoritmos e Lógica</a></li>
+                                <li class="li two"><a href="/src/pages/banco-de-dados.html">Banco de Dados</a></li>
+                                <li class="li tree"><a href="/src/pages/eletronica.html">Componentes eletronicos</a></li>
+                                <li class="li four"><a href="/src/pages/redes.html">Redes</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item sloboda">
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+
+            <button class="btn-default">Entrar em Contato</button>
+
+        </div>
+    </header>
+    <br><br><br><br>
+    <main class="redes-container" >
+        <section class="redes-section" id="elementos">
+            <h2 class="redes-section-title">Elementos, Componentes e Configuração de Rede Interna</h2>
+            <p class="redes-section-text">Essa seção aborda a configuração básica de redes internas usando o Cisco Packet Tracer. O Packet Tracer é uma ferramenta de simulação que permite criar, visualizar e configurar redes de forma prática.</p>
+            <p class="redes-section-text">Entre os componentes configuráveis, temos:</p>
+            <ul class="redes-section-list">
+                <li class="redes-section-list-item"><strong>Roteadores e switches:</strong> Interligam segmentos de rede e permitem a comunicação entre diferentes dispositivos.</li>
+                <li class="redes-section-list-item"><strong>Endereçamento IP:</strong> Configuração de IPs estáticos ou dinâmicos para dispositivos em uma rede.</li>
+                <li class="redes-section-list-item"><strong>Topologia:</strong> Estrutura física ou lógica que define como os dispositivos estão conectados.</li>
+            </ul>
+        </section>
+
+        <section class="redes-section" id="configuracao-servidores">
+            <h2 class="redes-section-title">Configuração dos Servidores</h2>
+            <p class="redes-section-text">Aqui discutimos os servidores fundamentais para o funcionamento de redes:</p>
+            <ul class="redes-section-list">
+                <li class="redes-section-list-item"><strong>Servidor DNS:</strong> Resolve nomes de domínio (ex.: www.exemplo.com) para endereços IP, facilitando a navegação na web.</li>
+                <li class="redes-section-list-item"><strong>Servidor HTTP:</strong> Responsável pela hospedagem de páginas e comunicação web. É o servidor que lida com requisições de navegação em sites.</li>
+                <li class="redes-section-list-item"><strong>Servidor DHCP:</strong> Distribui automaticamente endereços IP para dispositivos na rede, simplificando a configuração de rede para usuários.</li>
+            </ul>
+        </section>
+
+        <section class="redes-section" id="equipamentos">
+            <h2 class="redes-section-title">Equipamentos em Redes</h2>
+            <p class="redes-section-text">Essa seção explora os principais equipamentos usados em redes:</p>
+            <ul class="redes-section-list">
+                <li class="redes-section-list-item"><strong>Switch:</strong> Dispositivo que conecta vários dispositivos em uma rede local (LAN) e direciona dados para o dispositivo correto.</li>
+                <li class="redes-section-list-item"><strong>Roteador:</strong> Conecta redes diferentes e encaminha pacotes de dados entre elas. É essencial para acesso à internet.</li>
+                <li class="redes-section-list-item"><strong>Ponto de Acesso (Access Point):</strong> Permite a conexão de dispositivos sem fio à rede.</li>
+                <li class="redes-section-list-item"><strong>Firewall:</strong> Controla o tráfego de entrada e saída na rede, protegendo contra acessos não autorizados.</li>
+            </ul>
+        </section>
+
+        <section class="redes-section" id="servidor-conceito">
+            <h2 class="redes-section-title">Conceito de Servidor</h2>
+            <p class="redes-section-text">Um servidor é um dispositivo ou programa que fornece recursos, dados e serviços a outros dispositivos (chamados clientes) na rede. Ele desempenha diversas funções, como armazenar arquivos, hospedar websites e fornecer acesso a bancos de dados.</p>
+            <p class="redes-section-text">Servidores podem ser físicos ou virtuais e são fundamentais para o funcionamento de redes corporativas e da internet.</p>
+        </section>
+
+        <section class="redes-section" id="dns">
+            <h2 class="redes-section-title">DNS - O que é</h2>
+            <p class="redes-section-text">O DNS (Domain Name System) é como a "lista telefônica" da internet. Ele converte nomes de domínio amigáveis (ex.: www.site.com) em endereços IP numéricos que computadores entendem. Isso permite uma navegação mais simples para o usuário.</p>
+        </section>
+
+        <section class="redes-section" id="http">
+            <h2 class="redes-section-title">HTTP - O que é</h2>
+            <p class="redes-section-text">O HTTP (Hypertext Transfer Protocol) é o protocolo usado para comunicação entre navegadores e servidores. Ele define como as mensagens são formatadas e transmitidas e quais ações os servidores e navegadores devem tomar em resposta a diferentes comandos.</p>
+        </section>
+
+        <section class="redes-section" id="dhcp">
+            <h2 class="redes-section-title">DHCP - O que é</h2>
+            <p class="redes-section-text">O DHCP (Dynamic Host Configuration Protocol) é um protocolo que automaticamente fornece um endereço IP e outras configurações de rede para dispositivos em uma rede. Ele simplifica o processo de configuração, eliminando a necessidade de atribuição manual de IPs.</p>
+        </section>
+
+        <section class="redes-section" id="crimpagem">
+            <h2 class="redes-section-title">Foto da Crimpagem</h2>
+            <img src="caminho/da-imagem-crimpagem.jpg" alt="Foto de uma crimpagem de cabo de rede" class="redes-section-image">
+            <p class="redes-section-text">A crimpagem é o processo de fixação de um conector (RJ-45) em um cabo de rede. É essencial para garantir que a conexão entre dispositivos seja estável e sem interferências.</p>
+        </section>
+
+        <section class="redes-section" id="cabo-rede">
+            <h2 class="redes-section-title">Cabo de Rede - Pinagem</h2>
+            <p class="redes-section-text">A pinagem refere-se à ordem dos fios no conector RJ-45, que deve seguir padrões específicos (como T568A ou T568B) para garantir o funcionamento adequado. O padrão define a posição de cada fio de acordo com sua cor.</p>
+        </section>
+
+        <section class="redes-section" id="modelo-osi">
+            <h2 class="redes-section-title">Modelo OSI</h2>
+            <p class="redes-section-text">O modelo OSI (Open Systems Interconnection) é uma estrutura em camadas que descreve o processo de comunicação entre sistemas de rede. Ele possui 7 camadas, cada uma com funções específicas, desde a camada física até a aplicação.</p>
+            <p class="redes-section-text">Camadas do modelo OSI:</p>
+            <ul class="redes-section-list">
+                <li class="redes-section-list-item">1 - Física</li>
+                <li class="redes-section-list-item">2 - Enlace</li>
+                <li class="redes-section-list-item">3 - Rede</li>
+                <li class="redes-section-list-item">4 - Transporte</li>
+                <li class="redes-section-list-item">5 - Sessão</li>
+                <li class="redes-section-list-item">6 - Apresentação</li>
+                <li class="redes-section-list-item">7 - Aplicação</li>
+            </ul>
+        </section>
+
+        <section class="redes-section" id="tcp-ip">
+            <h2 class="redes-section-title">Conceito de TCP/IP</h2>
+            <p class="redes-section-text">O modelo TCP/IP é uma arquitetura de rede composta por quatro camadas e é a base da internet. Ele define como os dados são transmitidos e roteados de um dispositivo a outro.</p>
+            <p class="redes-section-text">Camadas do modelo TCP/IP:</p>
+            <ul class="redes-section-list">
+                <li class="redes-section-list-item">1 - Acesso à Rede</li>
+                <li class="redes-section-list-item">2 - Internet</li>
+                <li class="redes-section-list-item">3 - Transporte</li>
+                <li class="redes-section-list-item">4 - Aplicação</li>
+            </ul>
+        </section>
+    
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+:root {
+    --primary: #6610f2;
+    --secondary: #ffffff;
+    --tertiary: #333;
+}
+
+.box-purple {
+    background-color: #faf7ff;
+    display: flex;
+}
+
+.box-flex {
+    display: flex;
+}
+
+.box-flex.led {
+    background-image: url('/src/images/Circuit Board.svg');
+    background-position: center;
+    background-size: cover; /* Ocupa toda a div sem distorções */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    width: 100%;
+    height: auto; /* Certifique-se de que a altura da div pai esteja definida */
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px   ;
+}
+
+.div-box-bg {
+    width: 90%;
+    min-height: 400px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.801);
+    border-radius: 12px;
+    border: 2px solid var(--primary);
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden; /* Garante que conteúdo extra não ultrapasse o contêiner */
+    box-sizing: border-box;
+}
+
+.item-box-bg {
+    flex: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%; /* Limita a largura ao tamanho do contêiner pai */
+    box-sizing: border-box;
+}
+
+.item-box-bg.img, .item-box-bg.imgdp {
+    flex: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.item-box-bg .imgdp img, .item-box-bg .img img {
+    max-height: 100%; /* Ajusta a altura para não ultrapassar o contêiner */
+    max-width: 100%; /* Ajusta a largura para que a imagem não ultrapasse o contêiner */
+    object-fit: contain; /* Mantém a imagem ajustada dentro dos limites */
+    height: auto;
+    width: auto;
+}
+
+.item-box-bg h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.item-box-bg p {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.tinkercad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.tinkercad h2, h3{
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+.tinkercad img {
+    width: 90%;
+}
+
+.arduino {
+    background-image: url('/src/images/Simple\ Shiny.svg');
+    background-position: center;
+    background-size: cover; /* Ocupa toda a div sem distorções */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    width: 100%;
+    height: auto; /* Certifique-se de que a altura da div pai esteja definida */
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+    color: var(--secondary);
+    padding-top: 48px;
+}
+
+.arduino img {
+    padding: 24px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.multimetro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+@media screen and (max-width: 1051px) {
+    .div-box-bg {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .item-box-bg {
+        max-width: 100%; /* Garante que os elementos fiquem ajustados na largura menor */
+    }
+    .box-purple {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-purple img{
+        width: 90%;
+    }
+}

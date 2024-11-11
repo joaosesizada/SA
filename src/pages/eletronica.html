@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/src/images/icon-page.png" sizes="64x64" type="image/png" id="rel-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="/src/javascript/script.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="/src/style/style.css">
+    <title>JVAC</title>
+</head>
+
+<body>
+    <header>
+        <nav id="header" class="navbar">
+            <div class="item-nav">
+                <a id="logo-hearder" href="/">
+                    <i class="bi bi-globe2"></i>
+                    <h2>JVAC</h2>
+                </a>
+            </div>
+            <div class="list-nav">
+                <ul id="nav_list">
+                    <li class="nav-item pc">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="nav-item pc">
+                        <button id="btn-dropdown" class="navon">
+                            Serviços
+                        </button>
+                        <div id="drop">
+                            <div id="donw-menu">
+                                <ul>
+                                    <li class="li one"><a href="/src/pages/algoritmos.html">Algoritmos e Lógica</a></li>
+                                    <li class="li two"><a href="/src/pages/banco-de-dados.html">Banco de Dados</a></li>
+                                    <li class="li tree"><a href="/src/pages/eletronica.html">Componentes eletronicos</a></li>
+                                    <li class="li four"><a href="/src/pages/redes.html">Redes</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item pc">
+                        <a href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="item-nav btn">
+                <button class="btn-default">Solicitar Orçamento</button>
+            </div>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <button id="btn-dropdown-mobile" class="navoff">
+                        Serviços
+                    </button>
+                    <div id="drop">
+                        <div id="donw-menu-mobile">
+                            <ul>
+                                <li class="li one"><a href="/src/pages/algoritmos.html">Algoritmos e Lógica</a></li>
+                                <li class="li two"><a href="/src/pages/banco-de-dados.html">Banco de Dados</a></li>
+                                <li class="li tree"><a href="/src/pages/eletronica.html">Componentes eletronicos</a></li>
+                                <li class="li four"><a href="/src/pages/redes.html">Redes</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item sloboda">
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+
+            <button class="btn-default">Entrar em Contato</button>
+
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home-alg">
+            <div id="data-home">
+                <div class="typed-container">
+                    <h1 class="title" id="home-title-alg"></h1>
+                </div>
+
+                <script>
+                    var typed = new Typed('#home-title-alg', {
+                        strings: [
+                            'Elevando sua Empresa com Componentes de <span>Alta Qualidade</span>',
+                            'Transformando Tecnologia em <span>Eficiência</span>',
+                            'Soluções de Componentes para Desempenho <span>Superior</span>',
+                            'Potencializando Resultados com Componentes <span>Confiáveis</span>',
+                        ],
+                        typeSpeed: 50,
+                        loop: true,
+                        showCursor: true,
+                        cursorChar: '|',
+                        smartBackspace: true,
+                        startDelay: 300,
+                        backSpeed: 30,
+                        backDelay: 1500,
+                    });
+                </script>
+
+                <p class="description">
+                    Na nossa empresa, não apenas <strong>fabricamos</strong> e fornecemos componentes eletroeletrônicos,
+                    mas também
+                    oferecemos <strong>soluções tecnológicas e de integração</strong> para atender a todas as
+                    <strong>necessidades de desempenho e eficiência da sua empresa.</strong>
+                </p>
+                <div id="alg-home_buttons">
+                    <a href="" class="btn-default">Fale Conosco</a>
+                </div>
+
+            </div>
+            <div class="shape-home-alg">
+                <div id="forma-home-data">
+                    <img src="/src/images/img-eletronicos.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="box-purple">
+            <div class="flex-one">
+                <h2>Resistores e Código de Cores</h2>
+                <p>
+                    Os <strong>resistores</strong> são componentes fundamentais em circuitos eletrônicos, usados para
+                    limitar a corrente elétrica
+                    e ajustar tensões. A resistência de um resistor é medida em <em>Ohms</em> (&Omega;) e depende do
+                    material e do tamanho do componente.
+                </p>
+                <p>
+                    Para identificar o valor da resistência, utiliza-se o <strong>código de cores</strong>, um padrão
+                    internacional em que faixas de cores
+                    pintadas no corpo do resistor indicam seu valor em Ohms e a precisão (ou tolerância). Cada cor
+                    representa um número específico,
+                    permitindo que o valor seja interpretado de maneira prática.
+                </p>
+                <p>Por exemplo, um resistor com faixas de cores <span style="color: brown;">marrom</span>, <span
+                        style="color: black;">preto</span>,
+                    e <span style="color: red;">vermelho</span> representa uma resistência de 1 k&Omega; (1000 Ohms) com
+                    tolerância geralmente indicada pela última faixa.
+                </p>
+            </div>
+            <div class="flex-one image">
+                <img src="/src/images/resistores-4.webp" alt="">
+            </div>
+        </section>
+        <section id="info-data">
+            <div id="info-data-first">
+                <h2>O que é um banco de dados</h2>
+                <p>Um banco de dados é um sistema organizado para armazenar, gerenciar e recuperar informações de
+                    maneira eficiente. Ele permite que dados sejam estruturados em tabelas, registros ou outros
+                    formatos, facilitando o acesso, a análise e a manipulação por usuários ou aplicativos.</p>
+                <br>
+                <p>Bancos de dados são essenciais para empresas e sistemas que lidam com grandes volumes de informações,
+                    como registros de clientes, transações financeiras ou inventários, e são fundamentais para a tomada
+                    de decisões com base em dados precisos e atualizados.</p>
+            </div>
+        </section>
+        <section class="box-flex led">
+            <div class="div-box-bg">
+                <div class="item-box-bg">
+                    <h2>Diodo LED</h2>
+                    <p>O Diodo Emissor de Luz (LED, do inglês <em>Light Emitting Diode</em>) é um componente eletrônico
+                        que emite luz visível quando uma corrente elétrica passa por ele. Diferente das lâmpadas
+                        convencionais, os LEDs são altamente eficientes, convertendo a maior parte da energia em luz com
+                        pouca dissipação de calor. Utilizado em diversas aplicações, desde iluminação residencial até
+                        telas de dispositivos eletrônicos, o LED é valorizado pela durabilidade, baixo consumo de
+                        energia e capacidade de exibir diferentes cores ao variar o material semicondutor.</p>
+                </div>
+                <div class="item-box-bg img">
+                    <img src="/src/images/diodo-de-led-removebg-preview.png" alt="">
+                </div>
+            </div>
+            <div class="div-box-bg">
+                <div class="item-box-bg">
+                    <h2>Display de Sete Segmentos</h2>
+                    <p>O display de sete segmentos é um componente eletrônico utilizado para exibir números em
+                        dispositivos digitais. Ele é composto por sete LEDs organizados em forma de segmentos que podem
+                        ser ativados individualmente para formar dígitos de 0 a 9. Cada segmento é controlado de maneira
+                        independente, permitindo representar números e algumas letras. Os displays de sete segmentos são
+                        amplamente utilizados em relógios digitais, calculadoras, instrumentos de medição e outros
+                        dispositivos onde é necessário mostrar informações numéricas de forma clara e legível.</p>
+                </div>
+                <div class="item-box-bg imgdp">
+                    <img src="/src/images/display7segmentos.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="tinkercad">
+            <h2>TinkerCad</h2>
+            <p>O Tinkercad é uma plataforma online gratuita voltada para a criação de projetos 3D, eletrônicos e
+                simulações de circuitos. Ele permite que iniciantes e profissionais experimentem e aprendam conceitos de
+                design e eletrônica.</p>
+
+            <h3>Projeto: Semáforo</h3>
+            <p>Um dos projetos comuns no Tinkercad é a criação de um semáforo. Neste projeto, LEDs coloridos (vermelho,
+                amarelo e verde) são conectados a uma placa Arduino e controlados por código. O objetivo é simular o
+                funcionamento de um semáforo real, alternando as luzes com base em um tempo programado, permitindo que
+                estudantes aprendam sobre controle de sinais e automação.</p>
+
+            <img src="/src/images/tinkercad.png" alt="">
+        </section>
+        <section class="arduino">
+            <h2>Arduino no Tinkercad</h2>
+            <p>O Arduino é uma plataforma de prototipagem eletrônica fácil de usar, amplamente utilizada para projetos
+                de automação, robótica e educação. No Tinkercad, uma ferramenta online gratuita, é possível simular
+                circuitos e programar projetos com Arduino, permitindo que iniciantes e profissionais aprendam
+                eletrônica e programação de forma prática.</p>
+
+            <h3>Entradas e Saídas no Arduino</h3>
+            <p>O Arduino trabalha com diferentes tipos de entradas e saídas, o que possibilita a interação com diversos
+                sensores e dispositivos:</p>
+            <ul>
+                <li><strong>Entrada Analógica:</strong> As entradas analógicas no Arduino (pinos marcados com "A0" a
+                    "A5") permitem a leitura de sinais que variam continuamente, como sensores de temperatura ou de luz.
+                    Elas retornam valores entre 0 e 1023, indicando a intensidade do sinal recebido.</li>
+                <li><strong>Entrada Digital:</strong> As entradas digitais aceitam apenas dois estados, alto (HIGH) e
+                    baixo (LOW), representando 1 e 0. São usadas para detectar sinais de dispositivos como botões, onde
+                    o valor é ligado ou desligado.</li>
+                <li><strong>Saída Analógica (PWM):</strong> Embora o Arduino não produza uma verdadeira saída analógica,
+                    ele usa a técnica de Modulação por Largura de Pulso (PWM) para simular uma saída analógica. Os pinos
+                    PWM (identificados com ~) permitem controlar a intensidade de LEDs ou a velocidade de motores,
+                    variando o sinal entre 0 e 255.</li>
+            </ul>
+
+            <h2>Saída Digital no Arduino</h2>
+            <p>A <strong>saída digital</strong> no Arduino é um tipo de pino usado para enviar sinais binários (alto ou
+                baixo), ou seja, 1 (HIGH) ou 0 (LOW). Esses pinos são comumente usados para controlar dispositivos como
+                LEDs, relés e motores.</p>
+            <ul>
+                <li><strong>HIGH</strong>: Envia um sinal de 5V (ou 3.3V, dependendo do modelo do Arduino).</li>
+                <li><strong>LOW</strong>: Envia um sinal de 0V (terra).</li>
+            </ul>
+            <p>Para controlar uma saída digital, usamos a função <code>digitalWrite(pin, estado)</code>, onde "pin" é o
+                número do pino e "estado" pode ser <code>HIGH</code> ou <code>LOW</code>.</p>
+
+            <h3>Projeto: Semáforo com Arduino</h3>
+            <p>Um projeto popular no Tinkercad é a simulação de um semáforo usando Arduino. Neste projeto, LEDs
+                coloridos (vermelho, amarelo e verde) são conectados à placa Arduino e controlados por código,
+                utilizando tempos programados para alternar as luzes de forma sequencial, simulando o funcionamento de
+                um semáforo real. Esse projeto permite o aprendizado prático sobre controle de sinais, lógica de
+                programação e uso de saídas digitais.</p>
+
+            <img src="/src/images/arduino.webp">
+        </section>
+        <section class="multimetro">
+            <h3>Multímetro: O que é e para que serve</h3>
+            <p>O <strong>multímetro</strong> é um instrumento de medição utilizado para medir grandezas elétricas como tensão, corrente e resistência. Ele é essencial para técnicos e engenheiros, pois permite diagnosticar problemas em circuitos elétricos e eletrônicos.</p>
+            
+            <h3>Para que serve o multímetro?</h3>
+            <p>O multímetro serve para realizar as seguintes medições:</p>
+            <ul>
+                <li><strong>Tensão (Voltagem):</strong> Mede a diferença de potencial entre dois pontos de um circuito.</li>
+                <li><strong>Corrente elétrica:</strong> Mede a quantidade de carga elétrica que passa por um ponto do circuito por unidade de tempo.</li>
+                <li><strong>Resistência:</strong> Mede a oposição ao fluxo de corrente elétrica em um componente.</li>
+            </ul>
+            
+            <h3>Unidades de medida no multímetro</h3>
+            <p>O multímetro possui diferentes escalas e unidades de medida:</p>
+            <ul>
+                <li><strong>Volts (V):</strong> Unidade de medida para a tensão elétrica.</li>
+                <li><strong>Amperes (A):</strong> Unidade de medida para a corrente elétrica.</li>
+                <li><strong>Ohms (Ω):</strong> Unidade de medida para a resistência elétrica.</li>
+            </ul>
+            
+            <p>Além dessas, muitos multímetros digitais também oferecem funções como medição de continuidade, diodos e testes de capacitores.</p>
+        </section>
+        
+    </main>
+    <footer>
+        <p class="redes-footer-text">©JVAC - Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

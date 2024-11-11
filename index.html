@@ -4,38 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/src/images/icon.png" sizes="64x64" type="image/png">
-    <link rel="stylesheet" href="/src/style/style.css">
+    <link rel="icon" href="src/images/icon-page.png" sizes="64x64" type="image/png" id="rel-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="/src/javascript/script.js" defer></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <title>J.Batista Terraplangem - Terraplanagem Itapema e Região</title>
-    <meta name="description" content="Serviços profissionais de terraplanagem em Itapema, Porto Belo, Tijucas e região. Locação de máquinas pesadas, limpeza de terrenos e aterros com excelência e segurança. Solicite um orçamento.">
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="/src/style/style.css">
+    <title>JVAC</title>
 </head>
 
 <body>
     <header>
-        <nav id="navbar">
+        <nav id="header" class="navbar">
             <div class="item-nav">
-                <a id="logo-hearder" href="/"><img src="src/images/icon.png" alt="" width="60px">
-                    <h2>J.Batista Terraplangem</h2>
+                <a id="logo-hearder" href="/">
+                    <i class="bi bi-globe2"></i>
+                    <h2>JVAC</h2>
                 </a>
             </div>
             <div class="list-nav">
                 <ul id="nav_list">
-                    <li class="nav-item pc active">
-                        <a href="#home">Início</a>
+                    <li class="nav-item pc">
+                        <a href="#home">Home</a>
                     </li>
                     <li class="nav-item pc">
-                        <a href="#sobre">Sobre</a>
+                        <button id="btn-dropdown" class="navon">
+                            Serviços
+                        </button>
+                        <div id="drop">
+                            <div id="donw-menu">
+                                <ul>
+                                    <li class="li one"><a href="/src/pages/algoritmos.html">Algoritmos e Lógica</a></li>
+                                    <li class="li two"><a href="/src/pages/banco-de-dados.html">Banco de Dados</a></li>
+                                    <li class="li tree"><a href="/src/pages/eletronica.html">Componentes eletronicos</a></li>
+                                    <li class="li four"><a href="/src/pages/redes.html">Redes</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item pc">
-                        <a href="#avaliacoes">Avaliações</a>
+                        <a href="#contato">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -50,33 +66,65 @@
         <div id="mobile_menu">
             <ul id="mobile_nav_list">
                 <li class="nav-item">
-                    <a href="#home">Início</a>
+                    <a href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#sobre">Sobre</a>
+                    <button id="btn-dropdown-mobile" class="navoff">
+                        Serviços
+                    </button>
+                    <div id="drop">
+                        <div id="donw-menu-mobile">
+                            <ul>
+                                <li class="li one"><a href="/src/pages/algoritmos.html">Algoritmos e Lógica</a></li>
+                                <li class="li two"><a href="/src/pages/banco-de-dados.html">Banco de Dados</a></li>
+                                <li class="li tree"><a href="/src/pages/eletronica.html">Componentes eletronicos</a></li>
+                                <li class="li four"><a href="/src/pages/redes.html">Redes</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a href="#avaliacoes">Avaliações</a>
+                    <a href="#contato">Contato</a>
                 </li>
             </ul>
 
-            <button class="btn-default">Solicitar Orçamento</button>
+            <button class="btn-default">Entrar em Contato</button>
 
         </div>
     </header>
 
     <main id="content">
         <section id="home">
-            <div class="shape">
-                <img src="src/images/home.jpg" alt="">
-            </div>
             <div id="cta">
-                <h1 class="title">Soluções Eficientes para o seu <span>Terreno</span></h1>
+                <div class="typed-container">
+                    <h1 class="title" id="home-title"></h1>
+                </div>
+
+                <script>
+                    var typed = new Typed('#home-title', {
+                        strings: [
+                            'Soluções Tecnológicas para o seu <span>Negócio</span>',
+                            'Tecnologia de Ponta para sua <span>Vida</span>',
+                            'Transformando Ideias em <span>Realidade</span>',
+                            'Apoio Personalizado e Contínuo para seu <span>Sucesso</span>',
+                            'Excelência e Precisão em Cada <span>Projeto</span>',
+                            'Desenvolvimento Ágil e Inovador para o seu <span>Futuro</span>',
+                        ],
+                        typeSpeed: 50,
+                        loop: true,
+                        showCursor: true,
+                        cursorChar: '|',
+                        smartBackspace: true,
+                        startDelay: 300,
+                        backSpeed: 30,
+                        backDelay: 1500,
+                    });
+                </script>
 
                 <p class="description">
-                    Com anos de experiência em <strong>terraplanagem</strong>, <strong>nivelamento</strong> e <strong>preparação de terrenos</strong>, 
-                    oferecemos serviços de alta qualidade para transformar o seu projeto em realidade. Nosso compromisso é 
-                    entregar resultados rápidos e eficientes, sempre respeitando os prazos e garantindo a satisfação de nossos clientes.
+                    Nossa empresa não só <strong>desenvolve</strong> sistemas e plataformas, como também oferece
+                    <strong>soluções digitais</strong> completas para melhor atender todas as <strong>necessidades da
+                        sua Empresa.</strong>
                 </p>
 
                 <div id="cta_buttons">
@@ -94,24 +142,36 @@
                     <a href="" class="btn-default">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
-                    <a href="https://www.instagram.com/jbatistaterraplanagem/" target="_blank">
+                    <a href="" target="_blank">
                         <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
                     </a>
                 </div>
             </div>
-
+            <div class="shape">
+                <div class="half-moon">
+                    <img src="src/images/medium-shot-man-posing-studio.png" alt="">
+                </div>
+            </div>
         </section>
-
-        <section id="sobre">
-            <div class="sobre-padding">
+        <section id="presetation">
+            <div id="wave">
+                <img src="src/images/wave.png" alt="">
+            </div>
+            <div id="box-presetation">
                 <div class="sobre-aboutUs">
                     <h2>Quem Somos</h2>
                     <p>
-                        Somos uma empresa especializada em <strong>terraplanagem</strong> e <strong>transporte de resíduos</strong>, 
-                        reconhecida pela nossa confiabilidade e compromisso com a segurança em todas as etapas dos projetos. 
-                        Com uma longa trajetória de excelência, utilizamos <strong>equipamentos modernos</strong> e bem mantidos 
-                        para enfrentar os desafios mais complexos do setor de construção e infraestrutura. A confiança dos nossos 
-                        clientes é a base do nosso sucesso, e trabalhamos continuamente para mantê-la através da nossa dedicação 
+                        Somos uma empresa especializada em <strong>tecnologia</strong> e <strong>desenvolvimento de
+                            soluções digitais</strong>,
+                        reconhecida pela nossa inovação e compromisso com a qualidade em todas as fases dos projetos.
+                        Com uma longa trajetória de excelência, utilizamos <strong>tecnologias de ponta</strong> e
+                        metodologias ágeis
+                        para enfrentar os desafios mais complexos do setor de tecnologia. A confiança dos nossos
+                        clientes é a base do nosso sucesso, e trabalhamos continuamente para mantê-la através da nossa
+                        dedicação
                         aos mais altos <strong>padrões de qualidade</strong>.
                     </p>
                 </div>
@@ -119,186 +179,303 @@
                 <div class="sobre-commitment">
                     <h2>Nosso Compromisso</h2>
                     <p>
-                        Nosso compromisso é oferecer serviços de <strong>alta qualidade</strong> em terraplanagem e transporte de materiais, 
-                        sempre com foco em <strong>segurança</strong> e <strong>responsabilidade ambiental</strong>. Cada projeto é tratado 
-                        com a seriedade que ele merece, garantindo que todas as etapas sejam concluídas com excelência e que as 
-                        necessidades específicas de cada cliente sejam plenamente atendidas.
+                        Nosso compromisso é oferecer serviços de <strong>alta qualidade</strong> em tecnologia e
+                        desenvolvimento de soluções,
+                        sempre com foco em <strong>inovação, eficiência e segurança</strong>. Cada projeto é tratado com
+                        a seriedade que merece,
+                        garantindo a conclusão de todas as fases com excelência e o atendimento pleno das necessidades
+                        específicas de cada cliente.
                     </p>
                     <div class="commitment-icons">
                         <div class="icon-item">
-                            <img src="/src/images/quality-icon.png" alt="Ícone de Qualidade">
-                            <h2>Qualidade</h2>
+                            <i class="fa-brands fa-react"></i>
+                            <h2>Eficiência</h2>
                         </div>
                         <div class="icon-item">
-                            <img src="/src/images/security-icon.png" alt="Ícone de Segurança">
+                            <i class="fa-solid fa-robot"></i>
+                            <h2>Inovação</h2>
+                        </div>
+                        <div class="icon-item">
+                            <i class="fa-solid fa-shield-halved"></i>
                             <h2>Segurança</h2>
                         </div>
-                        <div class="icon-item">
-                            <img src="/src/images/ambiental.png" alt="Ícone de Responsabilidade Ambiental">
-                            <h2>Responsabilidade Ambiental</h2>
-                        </div>
                     </div>
                 </div>
             </div>
-            <div class="box-solutions">
-                <h2 id="box-solutions-title">Conheça nossas principais soluções</h2>
-                <div class="solutions-area">
-                    <div class="solutions-area-lines">
-                        <div class="solutions-area-item">
-                            <img src="/src/images/maquina-icon.png" alt="">
-                            <div class="solutions-area-item-text">
-                                <h3>TERRAPLANAGEM</h3>
-                                <p>Etapa de remoção do excesso de terra para nivelação do solo de condomínios e
-                                    loteamentos.</p>
-                            </div>
-                        </div>
-                        <div class="solutions-area-item">
-                            <img src="/src/images/caminhaoBasculante-icon.png" alt="">
-                            <div class="solutions-area-item-text">
-                                <h3>TRANSPORTE DE MATERIAIS</h3>
-                                <p>transporte eficiente de materiais pesados, como entulho , areia, pedras e etc. com
-                                    segurança e rapidez.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="solutions-area-lines">
-                        <div class="solutions-area-item">
-                            <img src="/src/images/demolicao-icon.png" alt="">
-                            <div class="solutions-area-item-text">
-                                <h3>DEMOLIÇÃO</h3>
-                                <p>transporte eficiente de materiais pesados, como entulho , areia, pedras e etc. com
-                                    segurança e rapidez.</p>
-                            </div>
-                        </div>
-                        <div class="solutions-area-item">
-                            <img src="/src/images/limpeza-icon.png" alt="">
-                            <div class="solutions-area-item-text">
-                                <h3>LIMPEZA DE TERRENO</h3>
-                                <p>A limpeza de terreno remove vegetação, tocos e resíduos para preparar o solo para
-                                    construção, garantindo uma base limpa e pronta para a obra.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <button class="btn-default" id="box-solutions-btn">Solicitar Orçamento</button>
-            </div>
-            <div class="sobre-padding locations">
-                <h2>Nossos Serviços de Terraplanagem em Santa Catarina</h2>
-                <p>
-                    Estamos presentes nas principais cidades de Santa Catarina, oferecendo serviços de terraplanagem, 
-                    movimentação de terra, aterros e muito mais. Com uma equipe experiente e equipamentos modernos, 
-                    garantimos resultados de qualidade em todas as nossas obras. Confira abaixo algumas das cidades 
-                    onde atuamos e veja como podemos ajudar no seu projeto.
-                </p>
-                <ul>
-                    <li><strong>Itapema:</strong> Realizamos terraplanagem completa, preparando o terreno para 
-                    construções de pequeno e grande porte.</li>
-                    <li><strong>Camboriú:</strong> Oferecemos limpeza de terrenos e movimentação de terra para 
-                    garantir uma base sólida para qualquer construção.</li>
-                    <li><strong>Balneário Camboriú:</strong> Nossos serviços incluem desde a preparação do solo até 
-                    a execução de aterros e nivelamentos, sempre com foco na eficiência.</li>
-                    <li><strong>Itajaí:</strong> Somos especialistas em nivelamento de terrenos e execução de aterros 
-                    para projetos residenciais, comerciais e industriais.</li>
-                    <li><strong>Tijucas:</strong> Oferecemos soluções rápidas e eficazes em terraplanagem, incluindo 
-                    remoção de entulhos e preparação de terrenos para novos empreendimentos.</li>
-                    <li><strong>Porto Belo:</strong> Executamos obras de terraplanagem com precisão, garantindo a melhor 
-                    estrutura para o seu projeto.</li>
-                    <li><strong>Bombinhas:</strong> Atendemos tanto áreas residenciais quanto comerciais, com serviços de 
-                    terraplanagem adaptados às necessidades locais, incluindo terrenos inclinados.</li>
-                </ul>
-                <p>
-                    Seja qual for o seu projeto, nossa empresa está pronta para oferecer soluções personalizadas e de 
-                    alta qualidade. <strong>Entre em contato</strong> e descubra como podemos contribuir para o sucesso da sua obra.
-                </p>
+            <div id="wave">
+                <img src="src/images/wave-reverse.png" alt="">
             </div>
         </section>
-        <section id="avaliacoes">
-            <div id="shape-feedback">
-                <div id="item-shape-feedback">
-                    <img id="png-caminhao" src="src/images/caminhao-img.png" alt="">
-                    <img id="png-maquina" src="src/images/maquina-img.png" alt="">
-                </div>
-            </div>
-            <div id="testimonials_content">
-                <h2 class="section-title">
-                    Depoimentos
-                </h2>
-                <h3 class="section-subtitle">
-                    O que os clintes falam sobre nós
-                </h3>
-
-                <div id="feedback">
-                    <div class="feedback-content">
-                        <div class="feedback-content-header">
-                            <img src="/src/images/avatar-one.png" alt="">
-                            <div class="feedback-info">
-                                <p>Rogerio dos Santos</p>
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
+        <section id="info">
+            <div class="solutions-area">
+                <h2 id="title-solutions-area">Nossas principais soluções</h2>
+                <div id="carrosel-solution">
+                    <div class="item-solution">
+                        <div class="text-solution">
+                            <h3>Algoritmos e Lógica</h3>
+                            <p>
+                                Na nossa empresa, somos especialistas em desenvolver algoritmos sofisticados e soluções
+                                de lógica computacional
+                                que impulsionam a eficiência e a inovação. Combinamos técnicas avançadas e práticas de
+                                engenharia de software
+                                para resolver problemas complexos, oferecendo aos nossos clientes resultados precisos e
+                                otimizados. Nosso
+                                compromisso é aplicar a lógica e os algoritmos de maneira estratégica, facilitando a
+                                tomada de decisões e
+                                garantindo a excelência operacional em cada projeto.
+                            </p>
+                            <div class="area-btn-explore-solution">
+                                <button class="btn-explore-solution">
+                                    <a href="/src/pages/algoritmos.html">Explorar</a>
+                                </button>
                             </div>
                         </div>
-                        <div class="feedback-content-body">
+                        <div class="shape-solution">
+                            <div id="shape-alg">
+                                <img src="src/images/img-algoritimos.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-solution">
+                        <div class="text-solution">
+                            <h3>Bancos de Dados</h3>
                             <p>
-                                "Profissionais extremamente competentes e dedicados. O serviço de terraplanagem foi impecável e dentro do prazo."
+                                Nossa empresa é líder em soluções de bancos de dados, dedicando-se a oferecer segurança,
+                                eficiência e robustez na gestão das informações.
+                                Utilizamos as mais recentes tecnologias e práticas de engenharia para criar sistemas de
+                                banco de dados que garantem alta disponibilidade e integridade dos dados.
+                                Com um foco preciso nas necessidades únicas de cada cliente, nossas soluções são
+                                projetadas para otimizar o desempenho,
+                                facilitar a tomada de decisões estratégicas e assegurar que os dados estejam sempre
+                                acessíveis e protegidos.
+                                Confiar na nossa expertise significa investir em uma base sólida para o sucesso contínuo
+                                do seu negócio.
                             </p>
+                            <div class="area-btn-explore-solution">
+                                <button class="btn-explore-solution">
+                                    <a href="/src/pages/banco-de-dados.html">Explorar</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="shape-solution">
+                            <div id="shape-bd">
+                                <img src="src/images/img-database.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-solution">
+                        <div class="text-solution">
+                            <h3>Componentes Eletrônicos</h3>
+                            <p>
+                                Somos líderes no fornecimento de componentes eletrônicos de alta qualidade, essenciais
+                                para o desenvolvimento de soluções tecnológicas avançadas.
+                                Utilizamos os melhores materiais e técnicas de produção para garantir a durabilidade e
+                                eficiência dos nossos produtos.
+                                Com um enfoque nas necessidades específicas de cada cliente, nossas soluções são
+                                projetadas para oferecer desempenho superior,
+                                facilitando a inovação e garantindo que seus projetos tenham a base sólida necessária
+                                para o sucesso contínuo.
+                                Confie em nossa expertise para impulsionar seus projetos eletrônicos para o próximo
+                                nível.
+                            </p>
+                            <div class="area-btn-explore-solution">
+                                <button class="btn-explore-solution">
+                                    Explorar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="shape-solution">
+                            <div id="shape-ce">
+                                <img src="src/images/img-eletronicos.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-solution">
+                        <div class="text-solution">
+                            <h3>Páginas Web</h3>
+                            <p>
+                                Somos uma empresa especializada na criação de sites inovadores e funcionais,
+                                comprometida em transformar suas ideias em realidades digitais impactantes.
+                                Utilizamos as mais avançadas tecnologias e práticas de design para desenvolver websites
+                                que não apenas se destacam visualmente, mas também proporcionam uma experiência de
+                                usuário intuitiva e eficaz.
+                                Focamos nas necessidades exclusivas de cada cliente, oferecendo soluções personalizadas
+                                que otimizam a presença online e impulsionam o crescimento do negócio.
+                                Confiar em nossa expertise significa garantir um site robusto, seguro e totalmente
+                                alinhado com seus objetivos estratégicos.
+                            </p>
+                            <div class="area-btn-explore-solution">
+                                <button class="btn-explore-solution">
+                                    Explorar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="shape-solution">
+                            <div id="shape-pw">
+                                <img src="src/images/img-web.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div id="feedback">
-                    <div class="feedback-content">
-                        <div class="feedback-content-header">
-                            <img src="/src/images/avatar.two.png" alt=""> 
-                            <div class="feedback-info">
-                                <p>Angela Maria Rossi</p>
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </div>
-                        </div>                        
-                        <div class="feedback-content-body">
-                            <p>
-                                "Fiquei muito satisfeita com o atendimento e o resultado. O terreno ficou pronto para construção, exatamente como precisava."
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="btn-default-center">
-                    <button class="btn-default">Ver mais avaliações</button>
+                <div id="solutions-area-control">
+                    <button value="0" class="btn-control select"></button>
+                    <button value="1" class="btn-control"></button>
+                    <button value="2" class="btn-control"></button>
+                    <button value="3" class="btn-control"></button>
                 </div>
             </div>
+            <div class="div-padding">
+                <div id="title-contup">
+                    <h2>Mais informações sobre nós</h2>
+                </div>
+                <div class="contup">
+                    <div class="item-contup">
+                        <i class="fa-solid fa-users"></i>
+                        <span class="contup-value" data-val="2540">000+</span>
+                        <h4>Usuarios</h4>
+                    </div>
+                    <div class="item-contup">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <span class="contup-value" data-val="73">000+</span>
+                        <h4>Projetos Concluidos</h4>
+                    </div>
+                    <div class="item-contup">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <span class="contup-value" data-val="200">000+</span>
+                        <h4>Cafes tomados</h4>
+                    </div>
+                    <div class="item-contup">
+                        <i class="fa-solid fa-award"></i>
+                        <span class="contup-value" data-val="25">000+</span>
+                        <h4>Premiações recebidas</h4>
+                    </div>
+                    <div class="item-contup">
+                        <i class="fa-solid fa-server"></i>
+                        <span class="contup-value" data-val="12">000+</span>
+                        <h4>Servidores pelo Mundo</h4>
+                    </div>
+                </div>
+            </div>
+            <div id="title-fluxo">
+                <h2>Nossos Clientes</h2>
+            </div>
+            <div class="fluxo-cruzado-container">
+                <div class="fluxo-cruzado">
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-apple.webp" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-aws.webp" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-microsoft.webp" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-nike.png" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-xaiomi.png" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-sony.png" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-bmw.webp" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-google.webp" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-intel.png" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-lego.png" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-amd.png" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-macdonald.png" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-nvidia.png" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-openai.png" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-sansung.webp" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-valve.png" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-vovlo.webp" alt=""></div>
+                    <div class="item-fluxo-cruzado"><img src="src/images/logo-weg.png" alt=""></div>
+                </div>
+            </div>
+        </section>
+        <section id="tecnology">
+            <div id="tecnology-text">
+                <div id="container-tecnology-title">
+                    <h2 id="tecnology-title"></h2>
+                </div>
+
+                <script>
+                    var typed = new Typed('#tecnology-title', {
+                        strings: [
+                            'Principais <strong>Tecnologias e Ferramentas</strong> em Nosso Repertório'
+                        ],
+                        typeSpeed: 50,
+                        loop: true,
+                        showCursor: true,
+                        cursorChar: '|',
+                        smartBackspace: true,
+                        startDelay: 300,
+                        backSpeed: 30,
+                        backDelay: 1500,
+                    });
+                </script>
+            </div>
+            <div id="tecnology-area">
+                <style>
+                    .tippy-box[data-theme~='custom'] {
+                        background-color: #6610f2;
+                        /* Cor roxa */
+                        color: white;
+                        /* Fonte branca */
+                        font-size: 20px;
+                    }
+
+                    .tippy-box[data-theme~='custom'] .tippy-arrow {
+                        color: #6610f2;
+                        /* Cor roxa da seta */
+                    }
+                </style>
+                <div class="tecnology-colum">
+                    <div data-tippy-content="Babel" class="tecnology-item"><img src="src/images/icon-babel.png" alt="">
+                    </div>
+                    <div data-tippy-content="CSS" class="tecnology-item"><img src="src/images/icon-css.png" alt="">
+                    </div>
+                    <div data-tippy-content="Bootstrap" class="tecnology-item"><img src="src/images/icon-bt.png" alt="">
+                    </div>
+                    <div data-tippy-content="jQuery" class="tecnology-item"><img src="src/images/icon-jquery.png"alt="">
+                    </div>
+
+                </div>
+                <div class="tecnology-colum center">
+                    <div data-tippy-content="Git" class="tecnology-item"><img src="src/images/icon-git.png" alt="">
+                    </div>
+                    <div data-tippy-content="Google Cloud" class="tecnology-item"><img
+                            src="src/images/icon-google-cloud.png" alt=""></div>
+                    <div data-tippy-content="Html" class="tecnology-item"><img src="src/images/icon-html.webp" alt="">
+                    </div>
+                    <div data-tippy-content="Webpack" class="tecnology-item"><img src="src/images/icon-webpack.png"
+                            alt=""></div>
+                </div>
+                <div class="tecnology-colum">
+                    <div data-tippy-content="Javascript" class="tecnology-item"><img src="src/images/icon-js.png"
+                            alt=""></div>
+                    <div data-tippy-content="MongoDB" class="tecnology-item"><img src="src/images/icon-mongo-db.webp"
+                            alt=""></div>
+                    <div data-tippy-content="MySQL" class="tecnology-item"><img src="src/images/icon-mysql.png" alt="">
+                    </div>
+                    <div data-tippy-content="Postman" class="tecnology-item"><img src="src/images/icon-postman.jpeg"
+                            alt=""></div>
+                </div>
+                <div class="tecnology-colum center">
+                    <div data-tippy-content="Node.js" class="tecnology-item"><img src="src/images/icon-node.png" alt="">
+                    </div>
+                    <div data-tippy-content="Python" class="tecnology-item"><img src="src/images/icon-python.webp"
+                            alt=""></div>
+                    <div data-tippy-content="React" class="tecnology-item"><img src="src/images/icon-react.png" alt="">
+                    </div>
+                    <div data-tippy-content="NPM" class="tecnology-item"><img src="src/images/icon-npm.png" alt="">
+                    </div>
+                </div>
+                <script>
+                    tippy('[data-tippy-content]', {
+                        duration: 100,
+                        arrow: true,
+                        theme: 'custom' // Adiciona tema personalizado
+                    });
+                </script>
+            </div>
+        </section>
+        <section class="map">
+            <h2>Localização da Empresa</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.4571030991647!2d-48.650714424416066!3d-27.141904687052214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8adf63b37f293%3A0x65b4b75499f09798!2sAgripio%20Simas%2C%206348!5e0!3m2!1spt-BR!2sbr!4v1731333029256!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
     <footer>
-        <div id="wave">
-            <img src="src/images/wave.png" alt="">
-        </div>
-        <div id="footer_items"> 
-            <div class="item-footer">
-                <ul class="">
-                    <li class="nav-item">
-                        <a href="#home">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#sobre">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#avaliacoes">Avaliações</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="item-footer copy"><p>&copy; JVAC 2024</p></div>
-        </div>
+        <p class="redes-footer-text">©JVAC - Todos os direitos reservados.</p>
     </footer>
 </body>
 

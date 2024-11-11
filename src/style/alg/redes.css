@@ -1,0 +1,55 @@
+.redes-container {
+    height: auto;
+    padding: 1rem;
+}
+
+.redes-section {
+    background-color: #fff;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.redes-section-title {
+    font-size: 1.2em;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.redes-section-text, .redes-section-list, .redes-section-list-item {
+    font-size: 1em;
+    color: #666;
+}
+
+.redes-section-list {
+    padding-left: 1.2em;
+    margin-top: 0.5rem;
+}
+
+.redes-section-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 768px) {
+    .redes-container {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .redes-section {
+        padding: 1.5rem;
+    }
+
+    .redes-section-title {
+        font-size: 1.5em;
+    }
+
+    .redes-section-text, .redes-section-list, .redes-section-list-item {
+        font-size: 1.1em;
+    }
+}
