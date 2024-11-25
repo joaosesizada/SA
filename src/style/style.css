@@ -80,3 +80,7 @@ footer {
     background-color: var(--primary);
     color: var(--secondary);
 }
+
+#contato {
+    height: 67.8vh;
+}

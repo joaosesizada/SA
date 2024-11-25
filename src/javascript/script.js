@@ -139,5 +139,8 @@ controlers.forEach((control, index) => {
     });
 });
 
-
-
+document.querySelectorAll('.btn-default.contato').forEach(button => {
+    button.addEventListener('click', () => {
+        window.location.href = "/src/pages/contato.html";
+    });
+});
